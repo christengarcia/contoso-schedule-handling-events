@@ -84,6 +84,8 @@
 
 // TODO: Task 2 - Get the "schedule" list element from the document
 var list = document.getElementById("schedule");
+var track1Checkbox = document.getElementById("show-track-1")
+var track2Checkbox = document.getElementById("show-track-2")
 
 function createSessionElement(session) {
     // TODO: Task 3 - Create a <li> element for the session.
