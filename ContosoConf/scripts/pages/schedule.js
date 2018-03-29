@@ -109,8 +109,13 @@ function displaySchedule() {
     //       Create session elements
     //       Append the elements to the list   
     for (var i = 0; i < schedule.length; i++) {
-        var li = createSessionElement(schedule[i]);
-        list.appendChild(li);
+        var tracks = schedule[i].tracks;
+        var isCurrentTrack = (track1Checkbox.checked && tracks.lastIndexOf(1) >= 0) || 
+                             (track2Checkbox.checked && tracks.indexOf(2) >=0);
+        if (isCurrentTrack) {
+            var li =createSessionElement(schedule[i]);
+            list.appendChild(li);   
+        }
     }
 }
 
